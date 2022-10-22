@@ -148,10 +148,19 @@ Piece.prototype.lock = function(){
             }
             // pieces to lock on top = game over
             if(this.y + r < 0){
-                alert("Game Over - Press enter to play again!");
                 // stop request animation frame
                 gameOver = true;
-                break;
+
+                Swal.fire({
+                    title: 'Game Over!',
+                    html: 'Your score is:<b>' + score + '</b><br><br>Do you want to try again?',
+                    icon: 'error',
+                    confirmButtonText: 'Let\'s go!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.reload();
+                    }
+                })             
             }
             // we lock the piece
             board[this.y+r][this.x+c] = this.color;
@@ -186,7 +195,7 @@ Piece.prototype.lock = function(){
     scoreElement.innerHTML = score;
 }
 
-// collision fucntion
+// collision function
 
 Piece.prototype.collision = function(x,y,piece){
     for( r = 0; r < piece.length; r++){
