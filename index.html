@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tetris Game JavaScript</title>
+    <style>
+        #score{
+            display: inline-block;
+        }
+        div{
+            font-size: 25px;
+            font-weight: bold;
+            font-family: monospace;
+            text-align: center;
+        }
+        canvas{
+            display: block;
+            margin:0 auto;
+        }
+        #presentation{
+          font-family:'Times New Roman', Times, serif;
+          font-weight: 700;
+          margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+   <div id="presentation">
+        This Game Was Realised By S.AM Following <a rel="noopener noreferer" target="_blank" href="https://www.youtube.com/c/codeexplained">Code Explained</a>'s Instructions 
+    </div>
+    <canvas id="tetris" width="200" height="400"></canvas>
+    <div>
+        Score : <div id="score">0</div>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="tetrominoes.js"></script>
+    <script src="tetris.js"></script>
+</body>
+</html>
