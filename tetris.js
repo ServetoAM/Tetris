@@ -10,7 +10,7 @@ const VACANT ="white";
 function drawSquare (x,y, color){
     ctx.fillStyle = color;
     ctx.fillRect(x*SQ, y*SQ, SQ, SQ);
-    ctx.strokeStyle = "black";
+    ctx.strokeStyle = "grey";
     ctx.strokeRect(x*SQ, y*SQ, SQ, SQ)
 }
 
@@ -35,13 +35,13 @@ function drawBoard(){
 drawBoard()
 
 const PIECES = [
-    [Z,"red"],
-    [S,"green"],
-    [T,"yellow"],
-    [O,"blue"],
-    [L,"pink"],
-    [I,"purple"],
-    [J,"orange"]
+    [Z,"#FF3213"],
+    [S,"#72CB3B"],
+    [T,"#FFD500"],
+    [O,"#0341AE"],
+    [L,"#C132AB"],
+    [I,"#5742B5"],
+    [J,"#FF971C"]
 ];
 
 function randomPiece(){
