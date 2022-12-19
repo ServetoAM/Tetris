@@ -4,13 +4,13 @@ const scoreElement = document.getElementById("score");
 const SQ = squareSize = 20;
 const ROW = 20;
 const COL = COLUMN = 10;
-const VACANT ="white";
+const VACANT ="black";
 
 //Draw a Square
 function drawSquare (x,y, color){
     ctx.fillStyle = color;
     ctx.fillRect(x*SQ, y*SQ, SQ, SQ);
-    ctx.strokeStyle = "black";
+    ctx.strokeStyle = "gray";
     ctx.strokeRect(x*SQ, y*SQ, SQ, SQ)
 }
 
@@ -148,7 +148,7 @@ Piece.prototype.lock = function(){
             }
             // pieces to lock on top = game over
             if(this.y + r < 0){
-                alert("Game Over - Press enter to play again!");
+                alert("Game Over - Want to try again ? Press enter !");
                 // stop request animation frame
                 gameOver = true;
                 break;

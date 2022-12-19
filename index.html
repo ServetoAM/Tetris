@@ -24,17 +24,25 @@
             font-weight: 700;
         }
     </style>
+    <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
 
-<body>
-    <canvas id="tetris" width="200" height="400"></canvas>
-    <div>
-        Score : <div id="score">0</div>
+<r>
+    <div id="background">
+        <div id="tetrislocation">
+            <canvas id="tetris" width="200" height="400"></canvas>
+        </div>
+        </br>
+        <div id="scorelocation">
+            Score : <div id="score">0</div>
+        </div>
+        </br>
+        <div id="presentation">This game redition was based on <a target="_blank"
+                href="https://www.youtube.com/c/codeexplained">Code Explained</a>'s instructions. </div>
     </div>
-    <div id="presentation">This game redition was based on <a target="_blank"
-            href="https://www.youtube.com/c/codeexplained">Code Explained</a>'s Instructions. </div>
+    </div>
     <script src="tetrominoes.js"></script>
     <script src="tetris.js"></script>
-</body>
+    </body>
 
 </html>
