@@ -186,7 +186,7 @@ Piece.prototype.lock = function(){
     scoreElement.innerHTML = score;
 }
 
-// collision fucntion
+// collision function
 
 Piece.prototype.collision = function(x,y,piece){
     for( r = 0; r < piece.length; r++){
